@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de arquitectura — Diseño contemporáneo que transforma espacios en experiencias. Proyectos residenciales, comerciales y culturales.">
+    <meta name="description"
+        content="Portafolio de arquitectura — Diseño contemporáneo que transforma espacios en experiencias. Proyectos residenciales, comerciales y culturales.">
     <title>Estudio Arcos | Arquitectura Contemporánea</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Cursor personalizado -->
@@ -53,11 +58,43 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section — Cinematic Video-style Animation -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="img/hero.png" alt="Arquitectura moderna" class="hero-img">
+            <div class="hero-slideshow">
+                <div class="hero-slide active" data-direction="zoom-in">
+                    <img src="img/hero.png" alt="">
+                </div>
+
+                <div class="hero-slide" data-direction="pan-left">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="">
+                </div>
+
+                <div class="hero-slide" data-direction="pan-right">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80" alt="">
+                </div>
+
+                <div class="hero-slide" data-direction="zoom-out">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="">
+                </div>
+            </div>
             <div class="hero-overlay"></div>
+            <!-- Cinematic bars -->
+            <div class="hero-cine-bar hero-cine-bar--top"></div>
+            <div class="hero-cine-bar hero-cine-bar--bottom"></div>
+            <!-- Film grain texture overlay -->
+            <div class="hero-grain"></div>
+        </div>
+        <!-- Slide progress indicator -->
+        <div class="hero-progress" id="hero-progress">
+            <div class="hero-progress-track">
+                <div class="hero-progress-fill" id="hero-progress-fill"></div>
+            </div>
+            <div class="hero-slide-counter">
+                <span class="hero-slide-current" id="hero-slide-current">01</span>
+                <span class="hero-slide-sep">/</span>
+                <span class="hero-slide-total">04</span>
+            </div>
         </div>
         <div class="hero-content">
             <p class="hero-subtitle anim-reveal">Estudio de Arquitectura</p>
@@ -91,12 +128,15 @@
                 </div>
                 <div class="about-right">
                     <p class="about-text anim-slide-up">
-                        En <strong>Estudio Arcos</strong>, creemos que la arquitectura trasciende las estructuras físicas. 
-                        Cada proyecto es una narrativa espacial que conecta personas, naturaleza y funcionalidad en un equilibrio 
+                        En <strong>Estudio Arcos</strong>, creemos que la arquitectura trasciende las estructuras
+                        físicas.
+                        Cada proyecto es una narrativa espacial que conecta personas, naturaleza y funcionalidad en un
+                        equilibrio
                         armónico.
                     </p>
                     <p class="about-text anim-slide-up">
-                        Con más de 15 años de experiencia, nuestro equipo multidisciplinario aborda cada desafío con curiosidad 
+                        Con más de 15 años de experiencia, nuestro equipo multidisciplinario aborda cada desafío con
+                        curiosidad
                         y rigor técnico, buscando siempre soluciones que sean tanto innovadoras como sostenibles.
                     </p>
                     <div class="about-stats anim-slide-up">
@@ -177,7 +217,8 @@
                 <!-- Proyecto 2 -->
                 <article class="project-card anim-scale-in" id="project-2">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Torre Nimbus" class="project-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                            alt="Torre Nimbus" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <span class="project-view">Ver Proyecto →</span>
                         </div>
@@ -192,7 +233,8 @@
                 <!-- Proyecto 3 -->
                 <article class="project-card anim-scale-in" id="project-3">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80" alt="Centro Cultural Raíces" class="project-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80"
+                            alt="Centro Cultural Raíces" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <span class="project-view">Ver Proyecto →</span>
                         </div>
@@ -207,7 +249,8 @@
                 <!-- Proyecto 4 -->
                 <article class="project-card anim-scale-in" id="project-4">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1518005068251-37900150dfca?w=800&q=80" alt="Edificio Verde Vivo" class="project-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1518005068251-37900150dfca?w=800&q=80"
+                            alt="Edificio Verde Vivo" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <span class="project-view">Ver Proyecto →</span>
                         </div>
@@ -222,7 +265,8 @@
                 <!-- Proyecto 5 -->
                 <article class="project-card large anim-scale-in" id="project-5">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Villa Serena" class="project-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                            alt="Villa Serena" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <span class="project-view">Ver Proyecto →</span>
                         </div>
@@ -237,7 +281,8 @@
                 <!-- Proyecto 6 -->
                 <article class="project-card anim-scale-in" id="project-6">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80" alt="Plaza Confluencia" class="project-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80"
+                            alt="Plaza Confluencia" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <span class="project-view">Ver Proyecto →</span>
                         </div>
@@ -255,7 +300,8 @@
     <!-- Philosophy / Parallax Section -->
     <section class="philosophy" id="philosophy">
         <div class="parallax-bg">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80" alt="Arquitectura interior" class="parallax-img">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80"
+                alt="Arquitectura interior" class="parallax-img">
         </div>
         <div class="philosophy-overlay"></div>
         <div class="container philosophy-content">
@@ -268,8 +314,8 @@
                 <div class="pillar anim-slide-up">
                     <div class="pillar-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M24 8V40M8 24H40" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M24 8V40M8 24H40" stroke="currentColor" stroke-width="1.5" />
                         </svg>
                     </div>
                     <h3>Equilibrio</h3>
@@ -278,8 +324,8 @@
                 <div class="pillar anim-slide-up">
                     <div class="pillar-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 4L44 24L24 44L4 24L24 4Z" stroke="currentColor" stroke-width="1.5"/>
-                            <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M24 4L44 24L24 44L4 24L24 4Z" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="1.5" />
                         </svg>
                     </div>
                     <h3>Innovación</h3>
@@ -288,8 +334,9 @@
                 <div class="pillar anim-slide-up">
                     <div class="pillar-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 40C16 40 8 32 8 22C8 13.2 15.2 6 24 6C32.8 6 40 13.2 40 22C40 32 32 40 32 40" stroke="currentColor" stroke-width="1.5"/>
-                            <circle cx="24" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M16 40C16 40 8 32 8 22C8 13.2 15.2 6 24 6C32.8 6 40 13.2 40 22C40 32 32 40 32 40"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="24" cy="22" r="5" stroke="currentColor" stroke-width="1.5" />
                         </svg>
                     </div>
                     <h3>Sostenibilidad</h3>
@@ -339,7 +386,8 @@
                         ¿Tienes un proyecto <br>en mente?
                     </h2>
                     <p class="contact-subtitle anim-slide-up">
-                        Nos encantaría escuchar tu visión. Conversemos sobre cómo podemos transformar tus ideas en realidad.
+                        Nos encantaría escuchar tu visión. Conversemos sobre cómo podemos transformar tus ideas en
+                        realidad.
                     </p>
                     <div class="contact-info anim-slide-up">
                         <div class="contact-item">
@@ -380,12 +428,14 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..."
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn-submit" id="submit-btn">
                             <span>Enviar Mensaje</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </form>
@@ -425,4 +475,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

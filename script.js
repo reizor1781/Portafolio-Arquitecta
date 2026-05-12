@@ -1,11 +1,131 @@
+// ========== PRELOAD HERO IMAGES ==========
+async function preloadHeroImages() {
+    const images = document.querySelectorAll('.hero-slide img');
+    const promises = Array.from(images).map(img => {
+        return new Promise(resolve => {
+            if (img.complete) { resolve(); return; }
+            img.onload = resolve;
+            img.onerror = resolve;
+        });
+    });
+    await Promise.all(promises);
+}
+
 // ========== LOADER ==========
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
+    await preloadHeroImages();
     setTimeout(() => {
         document.getElementById('loader').classList.add('hidden');
         document.querySelector('.hero').classList.add('visible');
         animateHeroWords();
+        initHeroSlideshow();
     }, 2200);
 });
+
+// ========== CINEMATIC HERO SLIDESHOW ==========
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const progressFill = document.getElementById('hero-progress-fill');
+    const slideCounter = document.getElementById('hero-slide-current');
+    const SLIDE_DURATION = 6000;
+    const FADE_DURATION = 1500;
+    let currentSlide = 0;
+    let slideStartTime = performance.now();
+    let rafId;
+
+    // Ken Burns transform definitions per direction
+    const kenBurns = {
+        'zoom-in':   { from: 'scale(1.02)',                       to: 'scale(1.25)' },
+        'zoom-out':  { from: 'scale(1.25)',                       to: 'scale(1.02)' },
+        'pan-left':  { from: 'scale(1.15) translateX(5%)',        to: 'scale(1.15) translateX(-5%)' },
+        'pan-right': { from: 'scale(1.15) translateX(-5%)',       to: 'scale(1.15) translateX(5%)' },
+    };
+
+    // Set a slide's img to its starting transform (no transition)
+    function resetSlideTransform(slide) {
+        const img = slide.querySelector('img');
+        const dir = slide.dataset.direction;
+        const kb = kenBurns[dir];
+        if (!img || !kb) return;
+        img.style.transition = 'none';
+        img.style.transform = kb.from;
+    }
+
+    // Activate a slide's Ken Burns: set 'from' instantly, then transition to 'to'
+    function activateKenBurns(slide) {
+        const img = slide.querySelector('img');
+        const dir = slide.dataset.direction;
+        const kb = kenBurns[dir];
+        if (!img || !kb) return;
+
+        // 1. Instantly set starting position (no transition)
+        img.style.transition = 'none';
+        img.style.transform = kb.from;
+
+        // 2. Force reflow so the browser registers the 'from' position
+        img.offsetHeight;
+
+        // 3. Enable transition and set target — smooth Ken Burns begins
+        img.style.transition = 'transform 6s ease-in-out';
+        img.style.transform = kb.to;
+    }
+
+    // Initialize: set all slides to their starting transform
+    slides.forEach(s => resetSlideTransform(s));
+
+    // Start Ken Burns on the first active slide
+    activateKenBurns(slides[currentSlide]);
+
+    function advanceSlide() {
+        const oldSlide = slides[currentSlide];
+
+        // Fade out old slide
+        oldSlide.classList.remove('active');
+
+        // After fade-out completes, reset old slide's transform
+        setTimeout(() => resetSlideTransform(oldSlide), FADE_DURATION);
+
+        // Move to next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        const newSlide = slides[currentSlide];
+
+        // Activate new slide
+        newSlide.classList.add('active');
+        activateKenBurns(newSlide);
+
+        // Update counter
+        if (slideCounter) {
+            slideCounter.textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+
+        slideStartTime = performance.now();
+    }
+
+    function updateProgress(now) {
+        const elapsed = now - slideStartTime;
+        const progress = Math.min(elapsed / SLIDE_DURATION, 1);
+
+        if (progressFill) {
+            progressFill.style.height = (progress * 100) + '%';
+        }
+
+        if (progress >= 1) {
+            advanceSlide();
+        }
+
+        rafId = requestAnimationFrame(updateProgress);
+    }
+
+    rafId = requestAnimationFrame(updateProgress);
+
+    // Pause on hover
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', () => cancelAnimationFrame(rafId));
+    hero.addEventListener('mouseleave', () => {
+        slideStartTime = performance.now() - (parseFloat(progressFill.style.height) / 100 * SLIDE_DURATION);
+        rafId = requestAnimationFrame(updateProgress);
+    });
+}
 
 // ========== CUSTOM CURSOR ==========
 const cursor = document.getElementById('cursor');
