@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AUREUM — Complejo para el Adulto Mayor en Santa Marta, Colombia. Un proyecto de equipamiento que integra bienestar, terapia y calidad de vida.">
+    <title>Complejo Para EL Adulto Mayor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+</head>
+
+<body>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <span class="loader-text">AUREUM</span>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-text">AUREUM</span>
+            <span class="logo-dot"></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#about" class="nav-link">Nosotros</a></li>
+            <li><a href="index.html#projects" class="nav-link">Proyectos</a></li>
+            <li><a href="index.html#philosophy" class="nav-link">Filosofía</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="menu-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-links">
+            <li><a href="index.html#about" class="mobile-link">Nosotros</a></li>
+            <li><a href="index.html#projects" class="mobile-link">Proyectos</a></li>
+            <li><a href="index.html#philosophy" class="mobile-link">Filosofía</a></li>
+            <li><a href="index.html#contact" class="mobile-link">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-bg">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="Villa Serena"
+                class="project-hero-img">
+            <div class="project-hero-overlay"></div>
+        </div>
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-back-link anim-reveal">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16 10H4M4 10L10 4M4 10L10 16" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Volver a Proyectos
+            </a>
+            <div class="project-hero-meta anim-reveal">
+                <span class="project-hero-category">Equipamiento</span>
+                <span class="project-hero-year">2026</span>
+            </div>
+            <h1 class="project-hero-title">
+                <span class="anim-reveal-word">Complejo</span>
+                <span class="anim-reveal-word italic">Para el</span>
+                <span class="anim-reveal-word italic">Adulto Mayor</span>
+            </h1>
+            <p class="project-hero-location anim-reveal">Monteria, Cordoba</p>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-left anim-slide-up">
+                    <span class="section-tag">01 — Concepto</span>
+                    <h2 class="section-title">Un espacio pensado para <em>vivir plenamente</em></h2>
+                </div>
+                <div class="project-overview-right anim-slide-up">
+                    <p class="project-desc">
+                        La geometría del proyecto responde a las condiciones climáticas y sociales del lugar.
+                        Los volúmenes se organizan para controlar la radiación solar,
+                        favorecer la ventilación cruzada y crear espacios intermedios protegidos,
+                        pensados especialmente para el confort del adulto mayor.
+                    </p>
+                    <p class="project-desc">
+                        La propuesta arquitectónica integra zonas de terapia, espacios de socialización,
+                        jardines terapéuticos y áreas de descanso, conectando al usuario con la naturaleza
+                        y promoviendo una vida activa y plena.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Data -->
+            <div class="project-data anim-slide-up">
+                <div class="project-data-item">
+                    <span class="project-data-label">Tipología</span>
+                    <span class="project-data-value">Equipamiento Social</span>
+                </div>
+                <div class="project-data-item">
+                    <span class="project-data-label">Ubicación</span>
+                    <span class="project-data-value">Montería, Córdoba, Colombia</span>
+                </div>
+                <div class="project-data-item">
+                    <span class="project-data-label">Año</span>
+                    <span class="project-data-value">2026</span>
+                </div>
+                <div class="project-data-item">
+                    <span class="project-data-label">Área</span>
+                    <span class="project-data-value">10.000 m²</span>
+                </div>
+                <div class="project-data-item">
+                    <span class="project-data-label">Autores</span>
+                    <span class="project-data-value">Juana Celis / Jerónimo Bernal</span>
+                </div>
+                <div class="project-data-item">
+                    <span class="project-data-label">Semestre</span>
+                    <span class="project-data-value">V — U. La Gran Colombia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Descripcion general del proyecto -->
+    <section class="project-process">
+        <div class="container">
+            <span class="section-tag anim-slide-up">02 — Descripción</span>
+            <h2 class="section-title anim-slide-up">Descripcion general del proyecto</h2>
+            <div class="process-timeline">
+                <div class="process-step anim-slide-up">
+                    <div class="process-step-content">
+                        <h3>Análisis del Contexto</h3>
+                        <p>El proyecto surge como una respuesta a la necesidad de crear espacios dignos,
+                            activos y emocionalmente seguros para la población adulta mayor. Más que un edificio
+                            asistencial,
+                            la propuesta busca convertirse en un lugar de encuentro, autonomía y bienestar,
+                            donde la arquitectura favorezca la interacción social, el descanso,
+                            la actividad física y la conexión con la naturaleza.</p>
+                    </div>
+                </div>
+                <section class="project-fullwidth anim-scale-in" style="width: 80%; height: 450px; margin: auto;">
+                    <img src="img/hero.png" alt="Villa Serena — Vista General" class="project-fullwidth-img">
+                </section>
+            </div>
+    </section>
+
+    <!-- Main Project Image -->
+    <section class="project-fullwidth anim-scale-in">
+        <img src="img/hero.png" alt="Villa Serena — Vista General" class="project-fullwidth-img">
+    </section>
+
+     <!-- Horizontal Scroll Showcase -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <span class="section-tag anim-slide-up">03 — Complejo</span>
+            <h2 class="section-title anim-slide-up">Plan Maestro</h2>
+        </div>
+        <div class="showcase-track">
+            <div class="showcase-card anim-slide-up">
+                <div class="showcase-number">01</div>
+                <h3>Salud</h3>
+                <p>El componente de salud busca ofrecer un entorno seguro y confortable para el cuidado integral de los adultos mayores.</p>
+            </div>
+            <div class="showcase-card anim-slide-up">
+                <div class="showcase-number">02</div>
+                <h3>Recreación</h3>
+                <p>Espacios diseñados para fomentar la actividad física, la interacción social y el disfrute del tiempo libre, promoviendo el bienestar y una vida activa.</p>
+            </div>
+            <div class="showcase-card anim-slide-up">
+                <div class="showcase-number">03</div>
+                <h3>Residencial</h3>
+                <p>Espacios concebidos para brindar comodidad, seguridad y tranquilidad, garantizando un entorno adecuado para el descanso y la vida cotidiana de los usuarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+        <div class="container">
+            <span class="section-tag anim-slide-up">02 — Galería</span>
+            <h2 class="section-title anim-slide-up">Exploración Visual</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item--wide anim-scale-in">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                    alt="Fachada Principal" loading="lazy">
+                <div class="gallery-caption">Fachada Principal</div>
+            </div>
+            <div class="gallery-item anim-scale-in">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"
+                    alt="Espacios Interiores" loading="lazy">
+                <div class="gallery-caption">Espacios Interiores</div>
+            </div>
+            <div class="gallery-item anim-scale-in">
+                <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80"
+                    alt="Jardines Terapéuticos" loading="lazy">
+                <div class="gallery-caption">Jardines Terapéuticos</div>
+            </div>
+            <div class="gallery-item anim-scale-in">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+                    alt="Zona de Terapias" loading="lazy">
+                <div class="gallery-caption">Zona de Terapias</div>
+            </div>
+            <div class="gallery-item anim-scale-in">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+                    alt="Área de Descanso" loading="lazy">
+                <div class="gallery-caption">Área de Descanso</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Philosophy -->
+    <section class="project-philosophy">
+        <div class="parallax-bg">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80"
+                alt="Ambiente arquitectónico" class="parallax-img">
+        </div>
+        <div class="philosophy-overlay"></div>
+        <div class="container philosophy-content">
+            <span class="section-tag light anim-slide-up">03 — Concepto</span>
+            <blockquote class="philosophy-quote anim-slide-up">
+                "Diseñar para el adulto mayor no es diseñar para la vejez, es diseñar para la <em>vida plena</em>."
+            </blockquote>
+            <p class="philosophy-author anim-slide-up">— Estudio Aureum</p>
+
+            <div class="philosophy-pillars">
+                <div class="pillar anim-slide-up">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4C24 4 8 14 8 26C8 33.7 15.2 40 24 40C32.8 40 40 33.7 40 26C40 14 24 4 24 4Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M24 20V32M18 26H30" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Bienestar</h3>
+                    <p>Espacios que promueven la salud física y mental a través del diseño consciente.</p>
+                </div>
+                <div class="pillar anim-slide-up">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10 40C10 32.3 16.3 26 24 26C31.7 26 38 32.3 38 40" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Inclusión</h3>
+                    <p>Diseño universal que garantiza acceso y dignidad para todos los usuarios.</p>
+                </div>
+                <div class="pillar anim-slide-up">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 6L8 20V40H20V28H28V40H40V20L24 6Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Comunidad</h3>
+                    <p>Espacios de encuentro que fortalecen vínculos y combaten el aislamiento social.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="project-process">
+        <div class="container">
+            <span class="section-tag anim-slide-up">04 — Proceso</span>
+            <h2 class="section-title anim-slide-up">Etapas del Proyecto</h2>
+            <div class="process-timeline">
+                <div class="process-step anim-slide-up">
+                    <div class="process-step-number">01</div>
+                    <div class="process-step-content">
+                        <h3>Análisis del Contexto</h3>
+                        <p>Estudio del entorno urbano de Santa Marta, análisis de necesidades de la población adulta
+                            mayor y revisión de referentes arquitectónicos internacionales.</p>
+                    </div>
+                </div>
+                <div class="process-step anim-slide-up">
+                    <div class="process-step-number">02</div>
+                    <div class="process-step-content">
+                        <h3>Partido Arquitectónico</h3>
+                        <p>Definición del concepto generador basado en la integración del paisaje natural con los
+                            espacios construidos, priorizando la accesibilidad universal.</p>
+                    </div>
+                </div>
+                <div class="process-step anim-slide-up">
+                    <div class="process-step-number">03</div>
+                    <div class="process-step-content">
+                        <h3>Desarrollo del Diseño</h3>
+                        <p>Elaboración de plantas, cortes, fachadas y renders tridimensionales que materializan la
+                            propuesta espacial con atención al detalle constructivo.</p>
+                    </div>
+                </div>
+                <div class="process-step anim-slide-up">
+                    <div class="process-step-number">04</div>
+                    <div class="process-step-content">
+                        <h3>Planimetría Final</h3>
+                        <p>Documentación técnica completa del proyecto incluyendo detalles estructurales, memorias de
+                            diseño y especificaciones de materiales sostenibles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="other-projects">
+        <div class="container">
+            <span class="section-tag anim-slide-up">05 — Más Proyectos</span>
+            <h2 class="section-title anim-slide-up">También te puede interesar</h2>
+            <div class="projects-grid">
+                <article class="project-card anim-scale-in">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                            alt="Torre Nimbus" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="proyecto-planimetria.html">
+                                <span class="project-view">Ver Proyecto →</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Comercial</span>
+                        <h3 class="project-name">Torre Nimbus</h3>
+                        <p class="project-location">Bogotá, Colombia — 2023</p>
+                    </div>
+                </article>
+                <article class="project-card anim-scale-in">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                            alt="Proyecto Residencial" class="project-img" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="proyecto-torre-nimbus.html">
+                                <span class="project-view">Ver Proyecto →</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residencial</span>
+                        <h3 class="project-name">Proyecto Residencial</h3>
+                        <p class="project-location">Bogotá, Colombia — 2023</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">ARCOS<span class="logo-dot"></span></span>
+                    <p class="footer-tagline">Arquitectura que transforma espacios en experiencias.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <a href="index.html#about">Nosotros</a>
+                    <a href="index.html#projects">Proyectos</a>
+                    <a href="index.html#philosophy">Filosofía</a>
+                    <a href="index.html#contact">Contacto</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Redes</h4>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Behance</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Pinterest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Estudio Arcos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-page.js"></script>
+</body>
+
+</html>

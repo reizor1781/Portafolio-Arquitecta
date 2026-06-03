@@ -7,8 +7,8 @@
     --bg-card: #1a1a1a;
     --text: #f5f0eb;
     --text-muted: #8a8580;
-    --accent: #c8a87c;
-    --accent-light: #e0c9a6;
+    --accent: #fdfbd4;
+    --accent-light: #fdfbd4;
     --border: rgba(200,168,124,0.15);
     --radius: 12px;
     --font: 'Outfit', sans-serif;
@@ -19,7 +19,12 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
     font-family: var(--font);
-    background: var(--bg);
+    background-color: #000;
+    background-image: url('../img/bg-yellow.jpeg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+
     color: var(--text);
     overflow-x: hidden;
     cursor: none;
@@ -444,13 +449,16 @@ input, select, textarea { font-family: var(--font); }
 .showcase-track {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem; padding: 0 2rem;
+    padding-left: 15rem;
+    
 }
 .showcase-card {
     background: var(--bg-card);
-    border: 1px solid var(--border);
+    border: 3px solid ;
     border-radius: var(--radius);
     padding: 2.5rem 2rem;
     transition: transform var(--transition), border-color var(--transition);
+    border-color: #e5e580;
 }
 .showcase-card:hover {
     transform: translateY(-8px);
