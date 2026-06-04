@@ -89,10 +89,11 @@ input, select, textarea { font-family: var(--font); }
     padding: 1.5rem 2.5rem;
     display: flex; align-items: center; justify-content: space-between;
     z-index: 1000;
-    transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+    transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s, -webkit-backdrop-filter 0.4s;
 }
 .navbar.scrolled {
     background: rgba(10,10,10,0.85);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     padding: 1rem 2.5rem;
     border-bottom: 1px solid var(--border);
