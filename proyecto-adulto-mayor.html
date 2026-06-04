@@ -148,7 +148,7 @@
     <section class="project-process">
         <div class="container">
             <span class="section-tag anim-slide-up">02 — Descripción</span>
-            <h2 class="section-title anim-slide-up">Descripcion general del proyecto</h2>
+            <h2 class="section-title anim-slide-up">Descripción general del proyecto</h2>
             <div class="process-timeline">
                 <div class="process-step anim-slide-up">
                     <div class="process-step-content">
@@ -197,10 +197,69 @@
         </div>
     </section>
 
+    <!-- ========== ANÁLISIS: SPLIT PANELS 04 / 05 / 06 ========== -->
+    <section class="split-panels-section">
+
+        <!-- 04 — Organización espacial: texto izquierda, imagen derecha -->
+        <div class="split-panel anim-reveal">
+            <div class="split-panel__text">
+                <span class="section-tag">04 — Complejo para el adulto mayor</span>
+                <h2 class="split-panel__title">Organización<br><em>espacial</em></h2>
+                <div class="split-panel__divider"></div>
+                <h3 class="split-panel__subtitle">Análisis del Contexto</h3>
+                <p class="split-panel__body">La distribución organiza el programa mediante recorridos claros y continuos
+                    que priorizan la accesibilidad universal. Las áreas sociales, terapéuticas y recreativas se articulan
+                    alrededor de espacios abiertos que permiten iluminación natural, ventilación y descanso.</p>
+            </div>
+            <div class="split-panel__media anim-scale-in">
+                <img src="img/hero.png" alt="Organización espacial — Complejo Adulto Mayor" class="split-panel__img">
+                <div class="split-panel__media-label">Planta de distribución</div>
+            </div>
+        </div>
+
+        <!-- 05 — Bioclimática: imagen izquierda, texto derecha -->
+        <div class="split-panel split-panel--reverse anim-reveal">
+            <div class="split-panel__media anim-scale-in">
+                <img src="img/hero.png" alt="Estrategias bioclimáticas" class="split-panel__img">
+                <div class="split-panel__media-label">Estrategias bioclimáticas</div>
+            </div>
+            <div class="split-panel__text">
+                <span class="section-tag">05 — Complejo para el adulto mayor</span>
+                <h2 class="split-panel__title">Bioclimática<br><em>&amp; Confort</em></h2>
+                <div class="split-panel__divider"></div>
+                <h3 class="split-panel__subtitle">Protección Climática</h3>
+                <p class="split-panel__body">El proyecto incorpora estrategias bioclimáticas para reducir la incidencia
+                    solar directa mediante aleros, sombras vegetales y filtros arquitectónicos. La ventilación natural
+                    mejora el confort interior mientras disminuye la dependencia energética.</p>
+                <h3 class="split-panel__subtitle" style="margin-top:1.75rem;">Materialidad</h3>
+                <p class="split-panel__body">La materialidad privilegia superficies cálidas y naturales. La madera
+                    aporta cercanía y confort visual, mientras la vegetación introduce estímulos sensoriales asociados
+                    al bienestar psicológico y emocional del adulto mayor.</p>
+            </div>
+        </div>
+
+        <!-- 06 — Experiencia del usuario: texto izquierda, imagen derecha -->
+        <div class="split-panel anim-reveal">
+            <div class="split-panel__text">
+                <span class="section-tag">06 — Complejo para el adulto mayor</span>
+                <h2 class="split-panel__title">Experiencia<br><em>del Usuario</em></h2>
+                <div class="split-panel__divider"></div>
+                <p class="split-panel__body">El acceso está pensado como una transición amable entre ciudad y refugio.
+                    Desde la entrada, el usuario encuentra espacios abiertos, visuales amplias y recorridos intuitivos
+                    que disminuyen la sensación de desorientación y favorecen la autonomía.</p>
+            </div>
+            <div class="split-panel__media anim-scale-in">
+                <img src="img/hero.png" alt="Experiencia del usuario" class="split-panel__img">
+                <div class="split-panel__media-label">Recorridos y accesibilidad</div>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Project Gallery -->
     <section class="project-gallery">
         <div class="container">
-            <span class="section-tag anim-slide-up">02 — Galería</span>
+            <span class="section-tag anim-slide-up">07 — Galería</span>
             <h2 class="section-title anim-slide-up">Exploración Visual</h2>
         </div>
         <div class="gallery-grid">
@@ -240,7 +299,7 @@
         </div>
         <div class="philosophy-overlay"></div>
         <div class="container philosophy-content">
-            <span class="section-tag light anim-slide-up">03 — Concepto</span>
+            <span class="section-tag light anim-slide-up">08 — Concepto</span>
             <blockquote class="philosophy-quote anim-slide-up">
                 "Diseñar para el adulto mayor no es diseñar para la vejez, es diseñar para la <em>vida plena</em>."
             </blockquote>
@@ -287,7 +346,7 @@
     <!-- Project Process -->
     <section class="project-process">
         <div class="container">
-            <span class="section-tag anim-slide-up">04 — Proceso</span>
+            <span class="section-tag anim-slide-up">09 — Proceso</span>
             <h2 class="section-title anim-slide-up">Etapas del Proyecto</h2>
             <div class="process-timeline">
                 <div class="process-step anim-slide-up">
@@ -329,10 +388,11 @@
     <!-- Other Projects -->
     <section class="other-projects">
         <div class="container">
-            <span class="section-tag anim-slide-up">05 — Más Proyectos</span>
+            <span class="section-tag anim-slide-up">010 — Más Proyectos</span>
             <h2 class="section-title anim-slide-up">También te puede interesar</h2>
             <div class="projects-grid">
-                <article class="project-card anim-scale-in">
+                 <!-- Planimetria -->
+                <article class="project-card anim-scale-in" id="project-planimetria">
                     <div class="project-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
                             alt="Torre Nimbus" class="project-img" loading="lazy">
@@ -343,14 +403,16 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category">Comercial</span>
-                        <h3 class="project-name">Torre Nimbus</h3>
-                        <p class="project-location">Bogotá, Colombia — 2023</p>
+                        <span class="project-category">AUREUM</span>
+                        <h3 class="project-name">Planimetria</h3>
+                        <p class="project-location">Planimetria Completa</p>
                     </div>
                 </article>
-                <article class="project-card anim-scale-in">
+
+                 <!--Bitacora -->
+                <article class="project-card anim-scale-in" id="project-bitacora">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
                             alt="Proyecto Residencial" class="project-img" loading="lazy">
                         <div class="project-overlay">
                             <a href="proyecto-torre-nimbus.html">
@@ -359,9 +421,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category">Residencial</span>
-                        <h3 class="project-name">Proyecto Residencial</h3>
-                        <p class="project-location">Bogotá, Colombia — 2023</p>
+                        <span class="project-category">AUREUM</span>
+                        <h3 class="project-name">Bitacora Digital</h3>
+                        <p class="project-location">Bitacora Completa</p>
                     </div>
                 </article>
             </div>
@@ -373,26 +435,24 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">ARCOS<span class="logo-dot"></span></span>
+                    <span class="footer-logo">AUREUM<span class="logo-dot"></span></span>
                     <p class="footer-tagline">Arquitectura que transforma espacios en experiencias.</p>
                 </div>
                 <div class="footer-links-group">
                     <h4>Navegación</h4>
-                    <a href="index.html#about">Nosotros</a>
-                    <a href="index.html#projects">Proyectos</a>
-                    <a href="index.html#philosophy">Filosofía</a>
-                    <a href="index.html#contact">Contacto</a>
+                    <a href="#about">Nosotros</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#philosophy">Filosofía</a>
+                    <a href="#contact">Contacto</a>
                 </div>
                 <div class="footer-links-group">
                     <h4>Redes</h4>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">Behance</a>
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">Pinterest</a>
+                    <a href="https://www.instagram.com/vive_arquitectura_" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Estudio Arcos. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Proyecto AUREUM. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
