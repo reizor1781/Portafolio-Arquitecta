@@ -414,7 +414,7 @@ input, select, textarea { font-family: var(--font); }
     overflow: hidden; text-align: center;
 }
 .parallax-bg { position: absolute; inset: -20% 0; }
-.parallax-img { width: 100%; height: 100%; object-fit: cover; }
+.parallax-img { width: 100%; height: 100%; object-fit: contain;  }
 .philosophy-overlay {
     position: absolute; inset: 0;
     background: rgba(10,10,10,0.78);
@@ -715,3 +715,71 @@ a.contact-value:hover { color: var(--accent); }
     .hero-progress { display: none; }
     .hero-cine-bar { height: 3vh; }
 }
+
+/* ========== DOWNLOAD BUTTON ========== */
+.gallery-download-wrapper {
+    margin-top: 2.5rem;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.9rem 1.75rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition),
+                transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 0;
+}
+
+.btn-download:hover::before { transform: scaleX(1); }
+.btn-download:hover { color: var(--bg); box-shadow: 0 8px 24px rgba(253,251,212,0.15); transform: translateY(-2px); }
+.btn-download:active { transform: translateY(0); }
+
+.btn-download__icon,
+.btn-download__text,
+.btn-download__label {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-download__icon {
+    display: flex;
+    align-items: center;
+    animation: download-bounce 2s ease-in-out infinite;
+}
+
+.btn-download__label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    opacity: 0.75;
+}
+
+@keyframes download-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(3px); }
+}
+
