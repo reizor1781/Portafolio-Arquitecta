@@ -783,3 +783,280 @@ a.contact-value:hover { color: var(--accent); }
     50%       { transform: translateY(3px); }
 }
 
+/* ========== TOUR 360 SECTION ========== */
+.tour360 {
+    padding: 8rem 0 0;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.tour360::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 60%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.tour360-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.tour360-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 1.2rem auto 0;
+    line-height: 1.7;
+}
+
+/* -------- Viewer wrap -------- */
+.tour360-viewer-wrap {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 480px;
+    max-height: 820px;
+    background: #050505;
+    overflow: hidden;
+}
+
+#pano-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+/* Transition overlay for scene changes */
+.tour360-viewer-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 5;
+}
+
+.tour360-viewer-wrap.transitioning::after {
+    opacity: 0.65;
+}
+
+/* -------- Controls -------- */
+.tour360-controls {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.tour360-ctrl-btn {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+
+.tour360-ctrl-btn:hover {
+    background: rgba(253, 251, 212, 0.12);
+    border-color: rgba(253, 251, 212, 0.4);
+    transform: scale(1.08);
+}
+
+.tour360-ctrl-btn:active { transform: scale(0.96); }
+
+/* -------- Drag hint -------- */
+.tour360-hint {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(253, 251, 212, 0.75);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 10;
+    animation: hint-pulse 2.5s ease-in-out infinite;
+    transition: opacity 0.5s;
+}
+
+.tour360-hint.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes hint-pulse {
+    0%, 100% { opacity: 0.75; transform: translateX(-50%) translateY(0); }
+    50%       { opacity: 0.35; transform: translateX(-50%) translateY(-5px); }
+}
+
+/* -------- Scene label overlay -------- */
+.tour360-scene-label {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 10;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* -------- Scene navigation bar -------- */
+.scene-nav {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    padding: 0;
+}
+
+.scene-nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.scene-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 1.2rem 1rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-right: 1px solid var(--border);
+    position: relative;
+    transition: color 0.3s, background 0.3s;
+    overflow: hidden;
+}
+
+.scene-btn:last-child { border-right: none; }
+
+.scene-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scene-btn:hover {
+    color: var(--text);
+    background: rgba(253, 251, 212, 0.04);
+}
+
+.scene-btn.active {
+    color: var(--accent);
+    background: rgba(253, 251, 212, 0.06);
+}
+
+.scene-btn.active::before {
+    transform: scaleX(1);
+}
+
+.scene-btn-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.scene-btn:hover .scene-btn-icon,
+.scene-btn.active .scene-btn-icon {
+    border-color: var(--border);
+    background: rgba(253, 251, 212, 0.08);
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+    .tour360 { padding: 5rem 0 0; }
+
+    .tour360-viewer-wrap {
+        height: 55vw;
+        min-height: 300px;
+    }
+
+    .scene-btn {
+        padding: 1rem 0.4rem;
+        font-size: 0.62rem;
+        gap: 0.4rem;
+    }
+
+    .scene-btn-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .scene-btn-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scene-btn span { display: none; }
+    .scene-btn { padding: 0.9rem 0.5rem; }
+}
+
+/* ========== PANNELLUM OVERRIDES ========== */
+/* Restore normal cursor inside the 360 viewer */
+#pano-viewer,
+#pano-viewer * {
+    cursor: grab !important;
+}
+#pano-viewer:active,
+#pano-viewer *:active {
+    cursor: grabbing !important;
+}
+
+/* Hide Pannellum's built-in author/copyright text */
+.pnlm-about-msg,
+.pnlm-panorama-info,
+.pnlm-compass { display: none !important; }
+
+/* Make sure Pannellum fills the container */
+.pnlm-container {
+    width: 100% !important;
+    height: 100% !important;
+}
